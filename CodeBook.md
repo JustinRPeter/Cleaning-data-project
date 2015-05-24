@@ -74,28 +74,24 @@ The data sets are assigned column names. Then the training and test data sets
 are merged to create trainData and testData. These two data sets are combined
 to create a data frame named mergeData
 
-## Section 2. Extract only the measurements on the mean and standard deviation
-for each measurement. 
+## Section 2. Extract only the measurements on the mean and standard deviation for each measurement. 
 
 A grep is used to find those columns with 'mean' and 'std' in their names.
 
 Those columns are extracted from mergeData and the resultant data set is named
 extractData.
 
-## Section 3. Use descriptive activity names to name the activities in the
-data set
+## Section 3. Use descriptive activity names to name the activities in the data set
 
 The activity_labels.txt provides descriptive names. It is merged with the
 extractData data frame to create cleanData data frame.
 
-## Section 4. Appropriately label the data set with descriptive activity
-names.
+## Section 4. Appropriately label the data set with descriptive activity names.
 
 The gsub command is used to get rid of superfluous characters. The data names
 are self explanatory.
 
-## Section 5. Create a second, independent tidy data set with the average of
-each variable for each activity and each subject. 
+## Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 Finally we use the aggregate function to produce a data set with the mean of
 each variable and subject. Unnecessary columns are dropped. The final data set
