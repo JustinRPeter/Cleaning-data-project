@@ -76,7 +76,6 @@
 
 #-----3. and 4.Uses descriptive activity names to name the activities in the data set
 
-    cleanData <- merge(extractData,activityLabs,by.x="activityID",by.y="activityID")
     cleanData <- merge(extractData,activityLabs,by="activityID")
 
 #------5. Create a second, independent tidy data set with the average of
